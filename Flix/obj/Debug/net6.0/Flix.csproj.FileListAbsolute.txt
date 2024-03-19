@@ -47,3 +47,17 @@ C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Infra.dll
 C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Infra.pdb
+C:\Users\TiagoUrsich\Flix\Flix\obj\Debug\net6.0\Flix.sourcelink.json
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Npgsql.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\TiagoUrsich\Flix\Flix\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll

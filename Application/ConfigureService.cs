@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Contract.Extraction.Api.Application.Services;
-
+﻿using System.Reflection;
+using Application.UseCases.CreateFilm;
+using Domain.Contracts.UseCases.CreateFilm;
+using Microsoft.Extensions.Configuration;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
-
-public class ConfigureService
+public static class ConfigureService
 {
-    public void ConfigureServices(IServiceCollection services)
+    public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
     {
-        // Add services to the container.
-        services.AddScoped<FilmUserCases>(); // Register FilmUserCases with the appropriate lifetime
+        services.AddMediatR(cfg =>
+        {
+            cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly());
+        });
 
-        // Other service registrations...
+        services.AddScoped<ICreateFilmUseCase, CreateFilmUseCase>();
+
+        return services;
     }
 }

@@ -1,28 +1,37 @@
-﻿using Contract.Extraction.Api.Application.Gateway;
-using Contract.Extraction.Api.Application.Services;
-using Contract.Extraction.Api.Domain.Entities;
-using Microsoft.AspNetCore.Http;
+﻿using Domain.Contracts.UseCases.CreateFilm;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Flix.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("api/v1/[controller]")]
     public class FilmController : ControllerBase
     {
+        private readonly ICreateFilmUseCase _createFilmUseCase;
 
-        private readonly FilmUserCases _filmUserCases;
-
-        public FilmController(FilmUserCases filmUserCases)
+        public FilmController(ICreateFilmUseCase createFilmUseCase)
         {
-            _filmUserCases = filmUserCases;
+            _createFilmUseCase = createFilmUseCase;
         }
 
         [HttpPost]
-        public void PostFilm([FromBody]Filme filmes)
+        [ProducesResponseType(typeof(string), 200)]
+        public async Task<IActionResult> CreateFilmAsync([FromBody] CreateFilmInputDto input, CancellationToken cancellationToken)
         {
-            _filmUserCases.PostFilm(filmes);
+            try
+            {
+                var filmId = await _createFilmUseCase.CreateAsync(input, cancellationToken);
 
+                return Ok(
+                    new
+                    {
+                        FilmId = filmId
+                    });
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
         }
     }
 }
