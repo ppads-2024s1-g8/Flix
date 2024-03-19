@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2aDlDpaJDk18f7SK0w6uK20cWIsMsq/W02H6opUTpmSNm9AHcEK6he4cgPzpwSYaQ8koIbeux5pspU4pTDppow==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\TiagoUrsich\\Flix\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TiagoUrsich\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
