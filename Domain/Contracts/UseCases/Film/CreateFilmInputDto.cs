@@ -1,4 +1,4 @@
-﻿namespace Domain.Contracts.UseCases.CreateFilm;
+﻿namespace Domain.Contracts.UseCases.Film;
 
 public class CreateFilmInputDto
 {

@@ -1,8 +1,8 @@
 ﻿using Contract.Extraction.Api.Domain.Entities;
-using Domain.Contracts.UseCases.CreateFilm;
+using Domain.Contracts.UseCases.Film;
 using Flix.Application.InterfaceAdapters;
 
-namespace Application.UseCases.CreateFilm;
+namespace Application.UseCases.Film;
 
 public class CreateFilmUseCase : ICreateFilmUseCase
 {
@@ -27,7 +27,7 @@ public class CreateFilmUseCase : ICreateFilmUseCase
 
     private static void ValidateInput(CreateFilmInputDto input)
     {
-        if(input.Diretor == null)
+        if (input.Diretor == null)
         {
             throw new ArgumentException("Diretor não pode ser nulo", nameof(input.Diretor));
         }
