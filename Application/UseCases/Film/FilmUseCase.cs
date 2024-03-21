@@ -14,7 +14,7 @@ public class FilmUseCase : IFilmUseCase
         _dbContext = dbContext;
     }
 
-    public async Task<int> CreateAsync(FilmInputDto input, CancellationToken cancellationToken)
+    public async Task<string> CreateAsync(FilmInputDto input, CancellationToken cancellationToken)
     {
         ValidateInput(input);
 
@@ -23,7 +23,7 @@ public class FilmUseCase : IFilmUseCase
         await _dbContext.Filme.AddAsync(newFilm, cancellationToken);
         await _dbContext.SaveChangesAsync(cancellationToken);
 
-        return newFilm.Id;
+        return newFilm.Titulo;
     }
 
     public async Task<List<Filme>> GetAllAsync(CancellationToken cancellationToken)
@@ -32,19 +32,20 @@ public class FilmUseCase : IFilmUseCase
         return allFilm;
     }
 
-    public Task GetByIdAsync(CancellationToken cancellationToken)
+    public async Task<Filme> GetByIdAsync(int id, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var idFilm = await _dbContext.Filme.FirstOrDefaultAsync(filme => filme.Id == id);
+        return idFilm!;
     }
 
-    public async Task<Filme> DeleteByIdFilmAsync(int id, CancellationToken cancellationToken)
+    public async Task<Filme> DeleteByIdAsync(int id, CancellationToken cancellationToken)
     {
         var deletedFilm = await _dbContext.Filme.FirstOrDefaultAsync(filme => filme.Id == id);
 
         _dbContext.Filme.Remove(deletedFilm!);
         await _dbContext.SaveChangesAsync(cancellationToken);
 
-        return ($"Filme deletado: {deletedFilm}"!);
+        return deletedFilm!;
 
     }
 

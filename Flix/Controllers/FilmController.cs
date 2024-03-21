@@ -23,12 +23,12 @@ namespace Flix.Controllers
         {
             try
             {
-                var filmId = await _FilmUseCase.CreateAsync(input, cancellationToken);
+                var filmCreate= await _FilmUseCase.CreateAsync(input, cancellationToken);
 
                 return Ok(
                     new
                     {
-                        FilmId = filmId
+                        FilmTitulo = filmCreate
                     });
             }
             catch (Exception ex)
@@ -52,26 +52,26 @@ namespace Flix.Controllers
             }
         }
 
-        //[HttpGet]
-        //[Route("{id: int}")]
-        //public async Task<IActionResult> GetByIdFilmAsync(CancellationToken cancellationToken)
-        //{
-        //    try
-        //    {    
-        //        return Ok();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return Problem(ex.Message);
-        //    }
-        //}
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetByIdFilmAsync(int id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var filmId = await _FilmUseCase.GetByIdAsync(id, cancellationToken);
+                return Ok(filmId);
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+        }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteByIdFilmAsync(int id, CancellationToken cancellationToken)
         {
             try
             {
-                var deletedFilm = await _FilmUseCase.DeleteByIdFilmAsync(id, cancellationToken);
+                var deletedFilm = await _FilmUseCase.DeleteByIdAsync(id, cancellationToken);
 
                 return Ok(deletedFilm);
             }
