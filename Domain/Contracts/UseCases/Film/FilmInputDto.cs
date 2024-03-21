@@ -1,6 +1,6 @@
 ﻿namespace Domain.Contracts.UseCases.Film;
 
-public class CreateFilmInputDto
+public class FilmInputDto
 {
     public string Titulo { get; init; } = default!;
     public string Diretor { get; init; } = default!;

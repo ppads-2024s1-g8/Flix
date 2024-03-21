@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UseCases\Book\**" />
+    <Compile Remove="UseCases\Series\**" />
+    <EmbeddedResource Remove="UseCases\Book\**" />
+    <EmbeddedResource Remove="UseCases\Series\**" />
+    <None Remove="UseCases\Book\**" />
+    <None Remove="UseCases\Series\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.21" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.21">
@@ -19,11 +28,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UseCases\Book\" />
-    <Folder Include="UseCases\Series\" />
   </ItemGroup>
 
 </Project>

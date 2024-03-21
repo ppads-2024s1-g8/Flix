@@ -11,9 +11,16 @@ namespace Flix
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddCors( options =>
+            {
+                options.AddPolicy("AllowLocalhost", policy =>
+                {
+                    policy.WithOrigins("http://127.0.0.1:5500/").SetIsOriginAllowed(isOriginAllowed: _=> true)
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
 
-            
-            // Add services to the container.
 
             builder.Services.AddControllers();
             builder.Services.AddApplicationServices(builder.Configuration);
@@ -41,7 +48,10 @@ namespace Flix
 
             app.UseHttpsRedirection();
 
+            app.UseCors("AllowLocalhost");
             app.UseAuthorization();
+
+            
 
 
             app.MapControllers();

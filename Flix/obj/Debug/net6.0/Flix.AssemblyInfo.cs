@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Flix")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9afdb4e120681d117e29d551ce893a4f4f9c79c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7962c9322520c2aaa15da0dfab75f2672f3fdac3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flix")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flix")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
