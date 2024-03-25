@@ -14,9 +14,12 @@ public class FilmUseCase : IFilmUseCase
         _dbContext = dbContext;
     }
 
+
+
+
+
     public async Task<string> CreateAsync(FilmInputDto input, CancellationToken cancellationToken)
     {
-        ValidateInput(input);
 
         var newFilm = new Filme(input.Titulo, input.Diretor, input.Elenco, input.Pais, input.Ano);
 
@@ -35,6 +38,7 @@ public class FilmUseCase : IFilmUseCase
     public async Task<Filme> GetByIdAsync(int id, CancellationToken cancellationToken)
     {
         var idFilm = await _dbContext.Filme.FirstOrDefaultAsync(filme => filme.Id == id);
+
         return idFilm!;
     }
 
@@ -49,15 +53,33 @@ public class FilmUseCase : IFilmUseCase
 
     }
 
-
-
-    private static void ValidateInput(FilmInputDto input)
+    public async Task<Filme> PutByIdAsync(FilmInputDto input, int id, CancellationToken cancellationToken)
     {
-        if (input.Diretor == null)
+
+        var getFilm = await _dbContext.Filme.FirstOrDefaultAsync(f => f.Id == id);
+
+        
+        if (getFilm == null)
         {
-            throw new ArgumentException("Diretor não pode ser nulo", nameof(input.Diretor));
+            throw new Exception("Filme não encontrado");
         }
+
+        if (input.Titulo != null)
+            getFilm.Titulo = input.Titulo;
+        if (input.Diretor != null)
+            getFilm.Diretor = input.Diretor;
+        if (input.Elenco != null)
+            getFilm.Elenco = input.Elenco;
+        if (input.Pais != null)
+            getFilm.Pais = input.Pais;
+        if (input.Ano != null)
+            getFilm.Ano = input.Ano;
+
+        await _dbContext.SaveChangesAsync(cancellationToken);
+
+        return getFilm;
     }
+
 
     
 }

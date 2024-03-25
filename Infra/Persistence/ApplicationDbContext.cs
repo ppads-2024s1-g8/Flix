@@ -28,4 +28,5 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         var output = await base.SaveChangesAsync(cancellationToken);
         return output;
     }
+
 }

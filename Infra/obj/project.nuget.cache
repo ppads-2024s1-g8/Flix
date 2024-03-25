@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lr8ZmHIJNCqCTe2KM71yxV8Bx6FKUTRIOJ81jOb+I0t/UbbWhlX5oh1ZOD4YivDzO+thBsShuKTz7jl002F+Ug==",
+  "dgSpecHash": "wbK0jFCoIKI2h9UcNvoYiVNQJiMGGyyLSHjA3m1J2kVxfK06ay1T2xJZ3vMOJHL3SbgTiRMdVdv5YWQThzkxRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TiagoUrsich\\Flix\\Infra\\Infra.csproj",
+  "projectFilePath": "C:\\Users\\TiagoUrsich\\FLIX\\Infra\\Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

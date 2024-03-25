@@ -43,7 +43,7 @@ namespace Flix.Controllers
             try
             {
                 var filmList = await _FilmUseCase.GetAllAsync(cancellationToken);
-
+                
                 return Ok(filmList);
             }
             catch (Exception ex)
@@ -71,9 +71,9 @@ namespace Flix.Controllers
         {
             try
             {
-                var deletedFilm = await _FilmUseCase.DeleteByIdAsync(id, cancellationToken);
+                var filmDeleted = await _FilmUseCase.DeleteByIdAsync(id, cancellationToken);
 
-                return Ok(deletedFilm);
+                return Ok(filmDeleted);
             }
             catch (Exception ex)
             {
@@ -81,5 +81,19 @@ namespace Flix.Controllers
             }
         }
 
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> PutByIdFilmAsync([FromBody] FilmInputDto input, int id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var filmUpdated = await _FilmUseCase.PutByIdAsync(input,id,  cancellationToken);
+                return Ok(filmUpdated);
+                
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+        }
     }
 }

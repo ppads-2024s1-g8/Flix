@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LIVpkDaSdaGCINAzkVInlz8UopIM+AdYCIInfoTSzkZF4uUsYn+TPgwcbJEsut2Mn+sI7URrXo3X26ub26+OBQ==",
+  "dgSpecHash": "7ya52hE0ZVhkAtIflM0gDmR6wCLB05DjtHhgsgZB91VrWPiLPSqVO1+KGGsgPNBj1YMv0gNxKnRyHvGOg5hFpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TiagoUrsich\\Flix\\Flix\\Flix.csproj",
+  "projectFilePath": "C:\\Users\\TiagoUrsich\\FLIX\\Flix\\Flix.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",

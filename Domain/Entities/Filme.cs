@@ -11,11 +11,16 @@ public class Filme
         Ano = ano;
     }
 
+    public Filme()
+    {
+        
+    }
+
     public int Id { get; init; }
-    public string Titulo { get; set; }
-    public string Diretor { get; set; }
-    public string Elenco { get; set; }
-    public string Pais { get; set; }
-    public int Ano { get; set; }
+    public string Titulo { get; set; } = default!;
+    public string Diretor { get; set; } = default!;
+    public string Elenco { get; set; } = default!;
+    public string Pais { get; set; } = default!;
+    public int Ano { get; set; } = default!;
 }
     
