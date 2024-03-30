@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iYD2uZkZYeXXbY0dK4/7W+pRDpcu1F7EGTBCXD6ov8A5M0oYmf/PZ3qeeyeVsBXPPP6XxhZn+DP8sFH13lFaxw==",
+  "dgSpecHash": "OLAtPYiCt7JA2o4/NUwrmaqxfjZbKURl2x+8GvF9LDbBA4YJ3z/InM+4WM18cYp/pjCL9O1adBXUNrREQ1hNvg==",
   "success": true,
   "projectFilePath": "C:\\Users\\TiagoUrsich\\FLIX\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\TiagoUrsich\\.nuget\\packages\\docker.dotnet\\3.125.15\\docker.dotnet.3.125.15.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
@@ -22,9 +23,12 @@
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\TiagoUrsich\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\TiagoUrsich\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
-    "C:\\Users\\TiagoUrsich\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\TiagoUrsich\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\TiagoUrsich\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

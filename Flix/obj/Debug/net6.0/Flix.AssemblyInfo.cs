@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("a28f0463-559f-46c8-b6a7-b2a8fe600221")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Flix")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4bb424bf8cf173c5ffbcb31284f244e818acbee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0adeab238422dc2375773755506622709ec23254")]
 [assembly: System.Reflection.AssemblyProductAttribute("Flix")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Flix")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

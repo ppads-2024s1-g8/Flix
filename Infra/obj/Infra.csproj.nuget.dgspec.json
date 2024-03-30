@@ -50,6 +50,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.15, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
@@ -100,7 +104,7 @@
         "projectName": "Domain",
         "projectPath": "C:\\Users\\TiagoUrsich\\FLIX\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\TiagoUrsich\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TiagoUrsich\\Flix\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\TiagoUrsich\\FLIX\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TiagoUrsich\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -135,6 +139,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.15, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
@@ -173,7 +181,7 @@
         "projectName": "Infra",
         "projectPath": "C:\\Users\\TiagoUrsich\\FLIX\\Infra\\Infra.csproj",
         "packagesPath": "C:\\Users\\TiagoUrsich\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TiagoUrsich\\Flix\\Infra\\obj\\",
+        "outputPath": "C:\\Users\\TiagoUrsich\\FLIX\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TiagoUrsich\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -212,6 +220,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.15, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
