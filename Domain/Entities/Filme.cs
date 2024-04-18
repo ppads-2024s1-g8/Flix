@@ -1,4 +1,6 @@
-﻿namespace Contract.Extraction.Api.Domain.Entities;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Contract.Extraction.Api.Domain.Entities;
 
 public class Filme
 {
@@ -15,7 +17,7 @@ public class Filme
     {
         
     }
-
+    [Key]
     public int Id { get; init; }
     public string Titulo { get; set; } = default!;
     public string Diretor { get; set; } = default!;

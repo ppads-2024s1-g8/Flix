@@ -1,99 +1,95 @@
-﻿using System.Threading;
-using Contract.Extraction.Api.Domain.Entities;
-using Domain.Contracts.UseCases.Film;
-using Infra.Persistence;
+﻿using Domain.Contracts.UseCases.Film;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Flix.Controllers
+namespace Flix.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class FilmController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class FilmController : ControllerBase
+    private readonly IFilmUseCase _FilmUseCase;
+
+    public FilmController(IFilmUseCase createFilmUseCase)
     {
-        private readonly IFilmUseCase _FilmUseCase;
+        _FilmUseCase = createFilmUseCase;
+    }
 
-        public FilmController(IFilmUseCase createFilmUseCase)
+    [HttpPost]
+    [ProducesResponseType(typeof(string), 200)]
+    public async Task<IActionResult> CreateFilmAsync([FromBody] FilmInputDto input, CancellationToken cancellationToken)
+    {
+        try
         {
-            _FilmUseCase = createFilmUseCase;
+            var filmCreate = await _FilmUseCase.CreateAsync(input, cancellationToken);
+
+            return Ok(
+                new
+                {
+                    FilmTitulo = filmCreate
+                });
         }
-
-        [HttpPost]
-        [ProducesResponseType(typeof(string), 200)]
-        public async Task<IActionResult> CreateFilmAsync([FromBody] FilmInputDto input, CancellationToken cancellationToken)
+        catch (Exception ex)
         {
-            try
-            {
-                var filmCreate= await _FilmUseCase.CreateAsync(input, cancellationToken);
-
-                return Ok(
-                    new
-                    {
-                        FilmTitulo = filmCreate
-                    });
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Problem(ex.Message);
         }
+    }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllFilmAsync(CancellationToken cancellationToken)
+    [HttpGet]
+    public async Task<IActionResult> GetAllFilmAsync(CancellationToken cancellationToken)
+    {
+        try
         {
-            try
-            {
-                var filmList = await _FilmUseCase.GetAllAsync(cancellationToken);
-                
-                return Ok(filmList);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            var filmList = await _FilmUseCase.GetAllAsync(cancellationToken);
+
+            return Ok(filmList);
         }
-
-        [HttpGet("{id:int}")]
-        public async Task<IActionResult> GetByIdFilmAsync(int id, CancellationToken cancellationToken)
+        catch (Exception ex)
         {
-            try
-            {
-                var filmId = await _FilmUseCase.GetByIdAsync(id, cancellationToken);
-                return Ok(filmId);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Problem(ex.Message);
         }
+    }
 
-        [HttpDelete("{id:int}")]
-        public async Task<IActionResult> DeleteByIdFilmAsync(int id, CancellationToken cancellationToken)
+    [HttpGet("{id:int}")]
+    public async Task<IActionResult> GetByIdFilmAsync(int id, CancellationToken cancellationToken)
+    {
+        try
         {
-            try
-            {
-                var filmDeleted = await _FilmUseCase.DeleteByIdAsync(id, cancellationToken);
-
-                return Ok(filmDeleted);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            var filmId = await _FilmUseCase.GetByIdAsync(id, cancellationToken);
+            return Ok(filmId);
         }
-
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> PutByIdFilmAsync([FromBody] FilmInputDto input, int id, CancellationToken cancellationToken)
+        catch (Exception ex)
         {
-            try
-            {
-                var filmUpdated = await _FilmUseCase.PutByIdAsync(input,id,  cancellationToken);
-                return Ok(filmUpdated);
-                
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Problem(ex.Message);
+        }
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> DeleteByIdFilmAsync(int id, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var filmDeleted = await _FilmUseCase.DeleteByIdAsync(id, cancellationToken);
+
+            return Ok(filmDeleted);
+        }
+        catch (Exception ex)
+        {
+            return Problem(ex.Message);
+        }
+    }
+
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> PutByIdFilmAsync([FromBody] FilmInputDto input, int id, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var filmUpdated = await _FilmUseCase.PutByIdAsync(input, id, cancellationToken);
+            return Ok(filmUpdated);
+
+        }
+        catch (Exception ex)
+        {
+            return Problem(ex.Message);
         }
     }
 }

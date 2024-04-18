@@ -14,10 +14,6 @@ public class FilmUseCase : IFilmUseCase
         _dbContext = dbContext;
     }
 
-
-
-
-
     public async Task<string> CreateAsync(FilmInputDto input, CancellationToken cancellationToken)
     {
 
@@ -58,7 +54,7 @@ public class FilmUseCase : IFilmUseCase
 
         var getFilm = await _dbContext.Filme.FirstOrDefaultAsync(f => f.Id == id);
 
-        
+
         if (getFilm == null)
         {
             throw new Exception("Filme não encontrado");
@@ -72,7 +68,7 @@ public class FilmUseCase : IFilmUseCase
             getFilm.Elenco = input.Elenco;
         if (input.Pais != null)
             getFilm.Pais = input.Pais;
-        if (input.Ano != null)
+        if (input?.Ano != null)
             getFilm.Ano = input.Ano;
 
         await _dbContext.SaveChangesAsync(cancellationToken);
@@ -81,5 +77,5 @@ public class FilmUseCase : IFilmUseCase
     }
 
 
-    
+
 }

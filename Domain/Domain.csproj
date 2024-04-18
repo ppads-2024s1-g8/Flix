@@ -15,9 +15,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contracts\UseCases\Book\" />
-    <Folder Include="Contracts\UseCases\Series\" />
-  </ItemGroup>
-
 </Project>

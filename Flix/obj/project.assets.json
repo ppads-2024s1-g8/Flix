@@ -2170,11 +2170,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TiagoUrsich\\FLIX\\Flix\\Flix.csproj",
+      "projectUniqueName": "C:\\Users\\TiagoUrsich\\Flix\\Flix\\Flix.csproj",
       "projectName": "Flix",
-      "projectPath": "C:\\Users\\TiagoUrsich\\FLIX\\Flix\\Flix.csproj",
+      "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Flix\\Flix.csproj",
       "packagesPath": "C:\\Users\\TiagoUrsich\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TiagoUrsich\\FLIX\\Flix\\obj\\",
+      "outputPath": "C:\\Users\\TiagoUrsich\\Flix\\Flix\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TiagoUrsich\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2192,14 +2192,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\TiagoUrsich\\FLIX\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\TiagoUrsich\\FLIX\\Application\\Application.csproj"
+            "C:\\Users\\TiagoUrsich\\Flix\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Application\\Application.csproj"
             },
-            "C:\\Users\\TiagoUrsich\\FLIX\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\TiagoUrsich\\FLIX\\Domain\\Domain.csproj"
+            "C:\\Users\\TiagoUrsich\\Flix\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\TiagoUrsich\\FLIX\\Infra\\Infra.csproj": {
-              "projectPath": "C:\\Users\\TiagoUrsich\\FLIX\\Infra\\Infra.csproj"
+            "C:\\Users\\TiagoUrsich\\Flix\\Infra\\Infra.csproj": {
+              "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Infra\\Infra.csproj"
             }
           }
         }
@@ -2275,7 +2275,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

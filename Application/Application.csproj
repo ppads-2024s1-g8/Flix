@@ -7,15 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="UseCases\Book\**" />
-    <Compile Remove="UseCases\Series\**" />
-    <EmbeddedResource Remove="UseCases\Book\**" />
-    <EmbeddedResource Remove="UseCases\Series\**" />
-    <None Remove="UseCases\Book\**" />
-    <None Remove="UseCases\Series\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Docker.DotNet" Version="3.125.15" />
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.21" />
