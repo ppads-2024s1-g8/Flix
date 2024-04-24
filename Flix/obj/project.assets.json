@@ -2170,11 +2170,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TiagoUrsich\\Flix\\Flix\\Flix.csproj",
+      "projectUniqueName": "C:\\Users\\TiagoUrsich\\back-end-flix\\Flix\\Flix.csproj",
       "projectName": "Flix",
-      "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Flix\\Flix.csproj",
+      "projectPath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Flix\\Flix.csproj",
       "packagesPath": "C:\\Users\\TiagoUrsich\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TiagoUrsich\\Flix\\Flix\\obj\\",
+      "outputPath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Flix\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TiagoUrsich\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2192,14 +2192,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\TiagoUrsich\\Flix\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Application\\Application.csproj"
+            "C:\\Users\\TiagoUrsich\\back-end-flix\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Application\\Application.csproj"
             },
-            "C:\\Users\\TiagoUrsich\\Flix\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Domain\\Domain.csproj"
+            "C:\\Users\\TiagoUrsich\\back-end-flix\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\TiagoUrsich\\Flix\\Infra\\Infra.csproj": {
-              "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Infra\\Infra.csproj"
+            "C:\\Users\\TiagoUrsich\\back-end-flix\\Infra\\Infra.csproj": {
+              "projectPath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Infra\\Infra.csproj"
             }
           }
         }

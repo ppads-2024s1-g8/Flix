@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u+i+nczq8sSLsGsM8unLJJi1XqPvPrIa0OLfE/VrhIsU4REEY1T0T1uMfA/f1ZuZDuIPjlyKjQK3VJB+pYYQfw==",
+  "dgSpecHash": "RtxtMzAC++Xjs7QmVShBEKpnc/CbdileR9mNmX4RFP3KCab6ygp++6gGeVmdWah93xel/oD17LPUx6hcMhNthA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TiagoUrsich\\Flix\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\docker.dotnet\\3.125.15\\docker.dotnet.3.125.15.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

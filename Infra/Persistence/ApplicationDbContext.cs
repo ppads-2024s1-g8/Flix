@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using Contract.Extraction.Api.Domain.Entities;
 using Domain.Entities;
 using Flix.Application.InterfaceAdapters;
 using Microsoft.EntityFrameworkCore;
@@ -13,9 +12,9 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     }
 
     public DbSet<Filme> Filme => Set<Filme>();
-    public DbSet<Book> Livro  => Set<Book>();
-    public DbSet<Series> Serie => Set<Series>();
-    public DbSet<User> Usuario  => Set<User>();
+    public DbSet<Livro> Livro => Set<Livro>();
+    public DbSet<Serie> Serie => Set<Serie>();
+    public DbSet<Usuario> Usuario => Set<Usuario>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -24,14 +23,14 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         modelBuilder.Entity<Filme>()
             .ToTable("filme");
 
-        modelBuilder.Entity<Book>()
-            .ToTable("book");
+        modelBuilder.Entity<Livro>()
+            .ToTable("livro");
 
-        modelBuilder.Entity<Series>()
+        modelBuilder.Entity<Serie>()
             .ToTable("serie");
 
-        modelBuilder.Entity<User>()
-            .ToTable("user");
+        modelBuilder.Entity<Usuario>()
+            .ToTable("usuario");
 
         base.OnModelCreating(modelBuilder);
     }

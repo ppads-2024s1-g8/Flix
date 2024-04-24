@@ -1,4 +1,4 @@
-﻿using Contract.Extraction.Api.Domain.Entities;
+﻿using Domain.Entities;
 using Domain.Contracts.UseCases.Film;
 using Flix.Application.InterfaceAdapters;
 using Microsoft.EntityFrameworkCore;

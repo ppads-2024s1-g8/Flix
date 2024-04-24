@@ -1,4 +1,4 @@
-﻿using Contract.Extraction.Api.Domain.Entities;
+﻿using Domain.Entities;
 
 namespace Domain.Contracts.UseCases.Film
 {

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities;
 
-public class Series
+
+public class Serie
 {
-    public Series(string titulo, string diretor, string elenco, string pais, int anoLancamento, int numeroTemporadas)
+    public Serie(string titulo, string diretor, string elenco, string pais, int anoLancamento, int numeroTemporadas)
     {
         Titulo = titulo;
         Diretor = diretor;

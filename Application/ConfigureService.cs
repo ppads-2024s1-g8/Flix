@@ -1,6 +1,10 @@
 ﻿using System.Reflection;
+using Application.UseCases.Book;
 using Application.UseCases.Film;
+using Application.UseCases.Series;
+using Domain.Contracts.UseCases.Book;
 using Domain.Contracts.UseCases.Film;
+using Domain.Contracts.UseCases.Series;
 using Flix.Application.InterfaceAdapters;
 using Microsoft.Extensions.Configuration;
 
@@ -12,6 +16,8 @@ public static class ConfigureService
     {
 
         services.AddScoped<IFilmUseCase, FilmUseCase>();
+        services.AddScoped<IBookUseCase, BookUseCase>();
+        services.AddScoped<ISerieUseCase, SeriesUseCase>();
         return services;
     }
 }

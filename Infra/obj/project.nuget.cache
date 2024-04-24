@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "itxOMSE2jlglcBsbkYfPoCxnLNxQuqoKRs0EiYsSj8xa1G8Xiq6HWS8QvkFh7yBmL/I6xlTg43WIuYvPxacIEQ==",
+  "dgSpecHash": "Tj9dkKego6Nh59hA4ppbrEZwiAo6lDgKELc4NOCfNB27MdlYgjwSdE3b7pES+QK6fiESsXaPsedr+ytojh42nA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TiagoUrsich\\Flix\\Infra\\Infra.csproj",
+  "projectFilePath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Infra\\Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\docker.dotnet\\3.125.15\\docker.dotnet.3.125.15.nupkg.sha512",
     "C:\\Users\\TiagoUrsich\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",

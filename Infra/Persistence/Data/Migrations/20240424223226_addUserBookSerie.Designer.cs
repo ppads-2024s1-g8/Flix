@@ -3,6 +3,7 @@ using System;
 using Infra.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infra.Persistence.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240424223226_addUserBookSerie")]
+    partial class addUserBookSerie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +24,7 @@ namespace Infra.Persistence.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.Filme", b =>
+            modelBuilder.Entity("Contract.Extraction.Api.Domain.Entities.Filme", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -54,7 +56,7 @@ namespace Infra.Persistence.Data.Migrations
                     b.ToTable("filme", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.Entities.Livro", b =>
+            modelBuilder.Entity("Domain.Entities.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -83,10 +85,10 @@ namespace Infra.Persistence.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("livro", (string)null);
+                    b.ToTable("book", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.Entities.Serie", b =>
+            modelBuilder.Entity("Domain.Entities.Series", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -121,7 +123,7 @@ namespace Infra.Persistence.Data.Migrations
                     b.ToTable("serie", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.Entities.Usuario", b =>
+            modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -148,13 +150,13 @@ namespace Infra.Persistence.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Usuarioname")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("usuario", (string)null);
+                    b.ToTable("user", (string)null);
                 });
 #pragma warning restore 612, 618
         }

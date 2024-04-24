@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Contract.Extraction.Api.Domain.Entities;
+namespace Domain.Entities;
 
 public class Filme
 {

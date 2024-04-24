@@ -1,5 +1,4 @@
 ﻿using Domain.Contracts.UseCases.Book;
-using Domain.Contracts.UseCases.Film;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Flix.Controllers;

@@ -2,9 +2,10 @@
 
 namespace Domain.Entities;
 
-public class Book
+
+public class Livro
 {
-    public Book(string titulo, string autor, string editora, string pais, int anoLancamento)
+    public Livro(string titulo, string autor, string editora, string pais, int anoLancamento)
     {
         Titulo = titulo;
         Autor = autor;

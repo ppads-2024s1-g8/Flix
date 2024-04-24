@@ -1,6 +1,6 @@
 ﻿namespace Domain.Contracts.UseCases.Series;
 
-public class SeriesInputDto
+public class SerieInputDto
 {
     public string Titulo { get; set; } = default!;
     public string Diretor { get; set; } = default!;

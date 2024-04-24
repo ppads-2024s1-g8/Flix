@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TiagoUrsich\\Flix\\Domain\\Domain.csproj": {}
+    "C:\\Users\\TiagoUrsich\\back-end-flix\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TiagoUrsich\\Flix\\Domain\\Domain.csproj": {
+    "C:\\Users\\TiagoUrsich\\back-end-flix\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TiagoUrsich\\Flix\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\TiagoUrsich\\back-end-flix\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\TiagoUrsich\\Flix\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\TiagoUrsich\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TiagoUrsich\\Flix\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\TiagoUrsich\\back-end-flix\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TiagoUrsich\\AppData\\Roaming\\NuGet\\NuGet.Config",
