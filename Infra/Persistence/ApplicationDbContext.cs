@@ -32,6 +32,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
         modelBuilder.Entity<Usuario>()
             .ToTable("usuario");
 
+
         base.OnModelCreating(modelBuilder);
     }
 

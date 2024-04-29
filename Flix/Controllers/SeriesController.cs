@@ -1,4 +1,5 @@
 ﻿using Domain.Contracts.UseCases.Series;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Flix.Controllers;

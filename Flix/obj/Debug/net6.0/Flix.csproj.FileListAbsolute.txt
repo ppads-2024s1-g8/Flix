@@ -77,7 +77,6 @@ C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\MediatR.Contracts.dll
 C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
-C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -128,3 +127,13 @@ C:\Users\TiagoUrsich\back-end-flix\Flix\obj\Debug\net6.0\refint\Flix.dll
 C:\Users\TiagoUrsich\back-end-flix\Flix\obj\Debug\net6.0\Flix.pdb
 C:\Users\TiagoUrsich\back-end-flix\Flix\obj\Debug\net6.0\Flix.genruntimeconfig.cache
 C:\Users\TiagoUrsich\back-end-flix\Flix\obj\Debug\net6.0\ref\Flix.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\TiagoUrsich\back-end-flix\Flix\bin\Debug\net6.0\Microsoft.Extensions.Options.dll

@@ -1,7 +1,6 @@
-
+using Application.Authorization;
 using Infra;
 using Infra.Persistence;
-using Microsoft.EntityFrameworkCore;
 
 namespace Flix
 {
@@ -11,16 +10,21 @@ namespace Flix
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddCors( options =>
+            builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowLocalhost", policy =>
                 {
-                    policy.WithOrigins("http://127.0.0.1:5500/").SetIsOriginAllowed(isOriginAllowed: _=> true)
+                    policy.WithOrigins("http://127.0.0.1:5500/").SetIsOriginAllowed(isOriginAllowed: _ => true)
                     .AllowAnyHeader()
                     .AllowAnyMethod();
                 });
             });
-
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("UsuarioExistente",
+                    policy => policy.AddRequirements(new UsuarioExistente(false))
+                );
+            });
 
             builder.Services.AddControllers();
             builder.Services.AddApplicationServices(builder.Configuration);
@@ -51,7 +55,7 @@ namespace Flix
             app.UseCors("AllowLocalhost");
             app.UseAuthorization();
 
-            
+
 
 
             app.MapControllers();

@@ -6,12 +6,29 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Infra.Persistence.Data.Migrations
 {
-    public partial class addUserBookSerie : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "book",
+                name: "filme",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Titulo = table.Column<string>(type: "text", nullable: false),
+                    Diretor = table.Column<string>(type: "text", nullable: false),
+                    Elenco = table.Column<string>(type: "text", nullable: false),
+                    Pais = table.Column<string>(type: "text", nullable: false),
+                    Ano = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_filme", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "livro",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -24,7 +41,7 @@ namespace Infra.Persistence.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_book", x => x.Id);
+                    table.PrimaryKey("PK_livro", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -46,34 +63,35 @@ namespace Infra.Persistence.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "user",
+                name: "usuario",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Email = table.Column<string>(type: "text", nullable: false),
-                    Senha = table.Column<string>(type: "text", nullable: false),
                     Username = table.Column<string>(type: "text", nullable: false),
-                    DataDeNascimento = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Cidade = table.Column<string>(type: "text", nullable: false),
-                    Estado = table.Column<string>(type: "text", nullable: false)
+                    DataDeNascimento = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
+                    Password = table.Column<string>(type: "text", nullable: false),
+                    RePassword = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_user", x => x.Id);
+                    table.PrimaryKey("PK_usuario", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "book");
+                name: "filme");
+
+            migrationBuilder.DropTable(
+                name: "livro");
 
             migrationBuilder.DropTable(
                 name: "serie");
 
             migrationBuilder.DropTable(
-                name: "user");
+                name: "usuario");
         }
     }
 }

@@ -5,30 +5,20 @@ namespace Domain.Entities;
 
 public class Usuario
 {
-    public Usuario(
-        string email,
-        string senha,
-        string usuarioname,
-        DateTime dataDeNascimento,
-        string cidade,
-        string estado
-        )
+    public Usuario(string username, DateTime dataDeNascimento, string password, string rePassword)
     {
-        Email = email;
-        Senha = senha;
-        Usuarioname = usuarioname;
+        Username = username;
         DataDeNascimento = dataDeNascimento;
-        Cidade = cidade;
-        Estado = estado;
+        Password = password;
+        RePassword = rePassword;
     }
-
     [Key]
     public int Id { get; init; }
-    public string Email { get; set; } = default!;
-    public string Senha { get; set; } = default!;
-    public string Usuarioname { get; set; } = default!;
+    public string Username { get; set; } = default!;
     public DateTime DataDeNascimento { get; set; } = default!;
-    public string Cidade { get; set; } = default!;
-    public string Estado { get; set; } = default!;
-}
+    public string Password { get; set; } = default!;
+    public string RePassword { get; set; } = default!;
+    
 
+
+}
