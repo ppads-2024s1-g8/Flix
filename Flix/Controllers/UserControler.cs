@@ -29,8 +29,16 @@ public class UserController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginUsuarioDto input, CancellationToken cancellationToken)
     {
-        var token = await _UsuarioUseCase.Login(input, cancellationToken);
-        return Ok(token);
+        await _UsuarioUseCase.Login(input, cancellationToken);
+        return Ok("Usuário Autenticado");
 
     }
+    [HttpPost("avaliacoes")]
+    public async Task<IActionResult> Avaliacoes(AvaliacaoUsuarioDto input, CancellationToken cancellationToken)
+    {
+        await _UsuarioUseCase.Avaliacao(input, cancellationToken);
+        return Ok("Avalição Feita");
+
+    }
+
 }

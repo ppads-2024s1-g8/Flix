@@ -18,7 +18,7 @@ public class Usuario
     public DateTime DataDeNascimento { get; set; } = default!;
     public string Password { get; set; } = default!;
     public string RePassword { get; set; } = default!;
-    
+
 
 
 }

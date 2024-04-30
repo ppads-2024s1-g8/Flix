@@ -44,4 +44,33 @@ public class UsuarioUseCases : IUsuarioUseCase
         Domain.Entities.Authorization.SetUsuarioExistente(true);
         return token;
     }
+
+    public async Task<string> Avaliacao(AvaliacaoUsuarioDto avaliacaoUsuarioDto, CancellationToken cancellationToken)
+    {
+        if(avaliacaoUsuarioDto.Tipo == "Filme")
+        {
+            var filme = new Filme();
+            filme.SetAvaliação();
+            await _dbContext.Filme.AddAsync(filme, cancellationToken);
+
+        }
+
+        if (avaliacaoUsuarioDto.Tipo == "Serie")
+        {
+            var serie = new Serie();
+            serie.SetAvaliação();
+            await _dbContext.Serie.AddAsync(serie, cancellationToken);
+        }
+
+        if (avaliacaoUsuarioDto.Tipo == "Livro")
+        {
+            var livro = new Livro();
+            livro.SetAvaliação();
+            await _dbContext.Livro.AddAsync(livro, cancellationToken);
+        }
+
+
+        await _dbContext.SaveChangesAsync(cancellationToken);
+        return string.Empty;
+    }
 }

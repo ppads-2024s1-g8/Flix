@@ -5,6 +5,10 @@ namespace Domain.Entities;
 
 public class Serie
 {
+    public Serie()
+    {
+    }
+
     public Serie(string titulo, string diretor, string elenco, string pais, int anoLancamento, int numeroTemporadas)
     {
         Titulo = titulo;
@@ -22,4 +26,10 @@ public class Serie
     public string Pais { get; set; } = default!;
     public int AnoLancamento { get; set; } = default!;
     public int NumeroTemporadas { get; set; } = default!;
+    public int Avaliacao { get; set; } = default!;
+
+    public void SetAvaliação()
+    {
+        Avaliacao = +1;
+    }
 }
